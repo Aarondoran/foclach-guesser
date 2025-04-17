@@ -3,31 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wordle Helper</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    .input-group {
-      margin-bottom: 10px;
-    }
-    .answer {
-      font-weight: bold;
-      color: green;
-    }
-  </style>
+  <title>Foclach Guesser</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Wordle Helper</h1>
-  <div>
-    <p>Best Guess: <span class="answer" id="bestGuess">duine</span></p>
+  <h1>Foclach Guesser</h1>
+  <div id="game-board">
+    <div class="row">
+      <!-- Letters of the first word -->
+      <div class="tile" data-index="0" onclick="cycleColor(this)">d</div>
+      <div class="tile" data-index="1" onclick="cycleColor(this)">u</div>
+      <div class="tile" data-index="2" onclick="cycleColor(this)">i</div>
+      <div class="tile" data-index="3" onclick="cycleColor(this)">n</div>
+      <div class="tile" data-index="4" onclick="cycleColor(this)">e</div>
+    </div>
   </div>
-  <div class="input-group">
-    <label for="feedback">Enter Feedback (greens, yellows, greys):</label><br>
-    <input type="text" id="feedback" placeholder="e.g., GGY-- for 'greens, yellows'">
-  </div>
-  <button onclick="getNextGuess()">Get Next Guess</button>
+  <button id="next-word-button" onclick="getNextWord()">Next Word</button>
+  <p>Suggested Next Word: <span id="suggested-word">duine</span></p>
   <script src="script.js"></script>
 </body>
 </html>
