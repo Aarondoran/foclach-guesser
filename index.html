@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle Helper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .input-group {
+      margin-bottom: 10px;
+    }
+    .answer {
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wordle Helper</h1>
+  <div>
+    <p>Best Guess: <span class="answer" id="bestGuess">duine</span></p>
+  </div>
+  <div class="input-group">
+    <label for="feedback">Enter Feedback (greens, yellows, greys):</label><br>
+    <input type="text" id="feedback" placeholder="e.g., GGY-- for 'greens, yellows'">
+  </div>
+  <button onclick="getNextGuess()">Get Next Guess</button>
+  <script src="script.js"></script>
+</body>
+</html>
